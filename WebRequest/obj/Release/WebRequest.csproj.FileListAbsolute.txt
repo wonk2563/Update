@@ -1,0 +1,17 @@
+C:\Users\Kamishiro\Desktop\遊戲資料\VS\WebRequest\WebRequest\bin\Release\update.exe.config
+C:\Users\Kamishiro\Desktop\遊戲資料\VS\WebRequest\WebRequest\bin\Release\update.exe.manifest
+C:\Users\Kamishiro\Desktop\遊戲資料\VS\WebRequest\WebRequest\bin\Release\update.application
+C:\Users\Kamishiro\Desktop\遊戲資料\VS\WebRequest\WebRequest\bin\Release\update.exe
+C:\Users\Kamishiro\Desktop\遊戲資料\VS\WebRequest\WebRequest\bin\Release\update.pdb
+C:\Users\Kamishiro\Desktop\遊戲資料\VS\WebRequest\WebRequest\bin\Release\ICSharpCode.SharpZipLib.dll
+C:\Users\Kamishiro\Desktop\遊戲資料\VS\WebRequest\WebRequest\bin\Release\ICSharpCode.SharpZipLib.pdb
+C:\Users\Kamishiro\Desktop\遊戲資料\VS\WebRequest\WebRequest\bin\Release\ICSharpCode.SharpZipLib.xml
+C:\Users\Kamishiro\Desktop\遊戲資料\VS\WebRequest\WebRequest\obj\Release\WebRequest.Form1.resources
+C:\Users\Kamishiro\Desktop\遊戲資料\VS\WebRequest\WebRequest\obj\Release\update.Properties.Resources.resources
+C:\Users\Kamishiro\Desktop\遊戲資料\VS\WebRequest\WebRequest\obj\Release\WebRequest.csproj.GenerateResource.cache
+C:\Users\Kamishiro\Desktop\遊戲資料\VS\WebRequest\WebRequest\obj\Release\WebRequest.csproj.CoreCompileInputs.cache
+C:\Users\Kamishiro\Desktop\遊戲資料\VS\WebRequest\WebRequest\obj\Release\update.exe.manifest
+C:\Users\Kamishiro\Desktop\遊戲資料\VS\WebRequest\WebRequest\obj\Release\update.application
+C:\Users\Kamishiro\Desktop\遊戲資料\VS\WebRequest\WebRequest\obj\Release\WebRequest.csproj.CopyComplete
+C:\Users\Kamishiro\Desktop\遊戲資料\VS\WebRequest\WebRequest\obj\Release\update.exe
+C:\Users\Kamishiro\Desktop\遊戲資料\VS\WebRequest\WebRequest\obj\Release\update.pdb

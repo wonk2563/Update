@@ -1,4 +1,3 @@
-C:\Users\Kamishiro\Desktop\遊戲資料\VS\WebRequest\WebRequest\obj\Debug\WebRequest.csprojAssemblyReference.cache
 C:\Users\Kamishiro\Desktop\遊戲資料\VS\WebRequest\WebRequest\obj\Debug\WebRequest.Form1.resources
 C:\Users\Kamishiro\Desktop\遊戲資料\VS\WebRequest\WebRequest\obj\Debug\WebRequest.csproj.GenerateResource.cache
 C:\Users\Kamishiro\Desktop\遊戲資料\VS\WebRequest\WebRequest\obj\Debug\WebRequest.csproj.CoreCompileInputs.cache

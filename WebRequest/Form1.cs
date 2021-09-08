@@ -41,6 +41,18 @@ namespace WebRequest
             copyWorker.DoWork += CopyWorker_DoWork;
         }
 
+        private void Delete_All_File()
+        {
+            //刪除data資料夾下，除了cheakURI.txt以外的檔案
+            string[] files = System.IO.Directory.GetFiles(appEXpath + "data/");
+            foreach(string file in files)
+            {
+                if(file != "cheakURI.txt")
+                    File.Delete("data/" + file);
+            }
+        }
+
+
 
         //----------------------------讀取本地檔案-------------------------------------
         string nowVersion = "", cheakURI = "";
@@ -102,7 +114,7 @@ namespace WebRequest
             lastVersion = updateInfo[0];
             appEXpath = "data/" + updateInfo[1];
             updateURI = updateInfo[updateInfo.Length - 1];
-            if(updateInfo.Length-3 != 0)
+            if(updateInfo.Length-3 > 0)
             {
                 fixInfo = new string[updateInfo.Length - 3];
                 for (int i = 0; i < updateInfo.Length - 3; i++)                
@@ -126,8 +138,7 @@ namespace WebRequest
                     catch (Exception)
                     {
                         MessageBox.Show($"無法獲取更新包下載位址", "錯誤");
-                    }
-                    
+                    }                    
             }
             else
             {
@@ -135,7 +146,7 @@ namespace WebRequest
                     $"更新內容：\n" +
                     $"{fix}\n\n";
                 MessageBox.Show($"目前為最新版本", "檢查更新");
-            }                
+            }
         }
 
         //----------------------------下載更新-------------------------------------       
@@ -151,6 +162,7 @@ namespace WebRequest
             }
             catch (Exception ex)
             {
+                Delete_All_File();
                 MessageBox.Show("下載更新檔案失敗" + "\r\n" + ex.Message, "錯誤");
                 Application.Exit();
             }
@@ -195,9 +207,10 @@ namespace WebRequest
             }
             catch (Exception ex)
             {
+                Delete_All_File();
                 MessageBox.Show("更新檔案解壓縮失敗" + "\r\n" + ex.Message,"錯誤");
                 Application.Exit();
-            }
+            }            
         }
 
         int value = 0;
@@ -227,7 +240,7 @@ namespace WebRequest
             while (true)
             {
                 DirectoryInfo dirInfo = new DirectoryInfo(appEXpath);
-                int fileLen = dirInfo.GetFiles().Length;
+                int fileLen = dirInfo.GetFiles("*", SearchOption.AllDirectories).Length;
                 if(fileLen != 0)
                     value = 100 * (uSize / fileLen);
                 extractWorker.ReportProgress(value);
@@ -290,13 +303,14 @@ namespace WebRequest
                         File.Copy(s, destFile, true);
 
                         count++;
-                        value = 100 * (count / uSize);
+                        value = 100 * (files.Length - count);
                         copyWorker.ReportProgress(value);
                     }
                 }
             }
             catch (Exception ex)
             {
+                Delete_All_File();
                 MessageBox.Show("更新檔案複製失敗" + "\r\n" + ex.Message, "錯誤");
                 Application.Exit();
             }            
@@ -320,7 +334,9 @@ namespace WebRequest
             {
                 MessageBox.Show("更新檔案刪除失敗" + "\r\n" + ex.Message, "錯誤");
                 Application.Exit();
-            }            
+            }
+            this.proBarDownLoad.Value = 100;
+            this.lblPercent.Text = "100%";
             LB_nowRunning.Text = "更新完成";
         }        
     }

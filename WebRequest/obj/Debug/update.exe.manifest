@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="update.exe" size="152536">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="update.exe" size="153048">
       <assemblyIdentity name="update" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>7xlhJ/g3ViC9M1h7A72uT2ymCh752uk+Jl+X5MmLcGk=</dsig:DigestValue>
+        <dsig:DigestValue>gbeS3iR16nwJP6/ONw9Kn91ZFMKBeVxZYkY1m0s0w0Q=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -32,9 +32,9 @@
             this.proBarDownLoad = new System.Windows.Forms.ProgressBar();
             this.lblPercent = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.LB_nowRunning = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.LB_nowRunning = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -42,7 +42,7 @@
             // proBarDownLoad
             // 
             this.proBarDownLoad.Location = new System.Drawing.Point(11, 228);
-            this.proBarDownLoad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.proBarDownLoad.Margin = new System.Windows.Forms.Padding(2);
             this.proBarDownLoad.Name = "proBarDownLoad";
             this.proBarDownLoad.Size = new System.Drawing.Size(279, 18);
             this.proBarDownLoad.TabIndex = 2;
@@ -70,16 +70,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "版本資訊";
             // 
-            // LB_nowRunning
-            // 
-            this.LB_nowRunning.AutoSize = true;
-            this.LB_nowRunning.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.LB_nowRunning.Location = new System.Drawing.Point(11, 252);
-            this.LB_nowRunning.Name = "LB_nowRunning";
-            this.LB_nowRunning.Size = new System.Drawing.Size(60, 17);
-            this.LB_nowRunning.TabIndex = 5;
-            this.LB_nowRunning.Text = "執行項目";
-            // 
             // panel1
             // 
             this.panel1.AutoScroll = true;
@@ -97,6 +87,16 @@
             this.label1.Size = new System.Drawing.Size(0, 16);
             this.label1.TabIndex = 0;
             // 
+            // LB_nowRunning
+            // 
+            this.LB_nowRunning.AutoSize = true;
+            this.LB_nowRunning.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.LB_nowRunning.Location = new System.Drawing.Point(11, 252);
+            this.LB_nowRunning.Name = "LB_nowRunning";
+            this.LB_nowRunning.Size = new System.Drawing.Size(60, 17);
+            this.LB_nowRunning.TabIndex = 5;
+            this.LB_nowRunning.Text = "執行項目";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -107,12 +107,12 @@
             this.Controls.Add(this.lblPercent);
             this.Controls.Add(this.proBarDownLoad);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "檢查更新";
+            this.Text = "檢查更新 V";
             this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

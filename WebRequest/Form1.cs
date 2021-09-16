@@ -22,6 +22,7 @@ namespace WebRequest
         public Form1()
         {
             InitializeComponent();
+            this.Text = this.Text + update.Properties.Resources.Version;
             ReadVersionByTXT();
             WorkerInit();
         }
@@ -44,11 +45,11 @@ namespace WebRequest
         private void Delete_All_File()
         {
             //刪除data資料夾下，除了cheakURI.txt以外的檔案
-            string[] files = System.IO.Directory.GetFiles(appEXpath + "data/");
+            string[] files = System.IO.Directory.GetFiles("data/");
             foreach(string file in files)
             {
-                if(file != "cheakURI.txt")
-                    File.Delete("data/" + file);
+                if(file != "data/cheakURI.txt")
+                    File.Delete(file);
             }
         }
 
@@ -138,7 +139,7 @@ namespace WebRequest
                     catch (Exception)
                     {
                         MessageBox.Show($"無法獲取更新包下載位址", "錯誤");
-                    }                    
+                    }
             }
             else
             {
@@ -146,6 +147,7 @@ namespace WebRequest
                     $"更新內容：\n" +
                     $"{fix}\n\n";
                 MessageBox.Show($"目前為最新版本", "檢查更新");
+                Delete_All_File();
             }
         }
 
@@ -303,7 +305,7 @@ namespace WebRequest
                         File.Copy(s, destFile, true);
 
                         count++;
-                        value = 100 * (files.Length - count);
+                        value = 100 * (count / files.Length);
                         copyWorker.ReportProgress(value);
                     }
                 }
@@ -338,6 +340,7 @@ namespace WebRequest
             this.proBarDownLoad.Value = 100;
             this.lblPercent.Text = "100%";
             LB_nowRunning.Text = "更新完成";
+            Delete_All_File();
         }        
     }
 }

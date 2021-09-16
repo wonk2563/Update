@@ -33,3 +33,4 @@ D:\遊戲資料\VS\WebRequest\WebRequest\obj\Release\update.application
 D:\遊戲資料\VS\WebRequest\WebRequest\obj\Release\WebRequest.csproj.CopyComplete
 D:\遊戲資料\VS\WebRequest\WebRequest\obj\Release\update.exe
 D:\遊戲資料\VS\WebRequest\WebRequest\obj\Release\update.pdb
+D:\遊戲資料\VS\WebRequest\WebRequest\obj\Release\WebRequest.csprojAssemblyReference.cache

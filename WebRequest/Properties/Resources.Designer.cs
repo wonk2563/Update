@@ -59,5 +59,23 @@ namespace update.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   查詢類似 1.1.1 的當地語系化字串。
+        /// </summary>
+        internal static string Version {
+            get {
+                return ResourceManager.GetString("Version", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類似 確認更新完會刪除所有檔案 的當地語系化字串。
+        /// </summary>
+        internal static string 版本資訊 {
+            get {
+                return ResourceManager.GetString("版本資訊", resourceCulture);
+            }
+        }
     }
 }

@@ -1,3 +1,0 @@
-cheakUpdate=true
-nexttime=false
-remindedversion=1.0.0

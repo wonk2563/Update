@@ -280,7 +280,7 @@ namespace WebRequest
                 if (System.IO.Directory.Exists(appEXpath))
                 {
                     string[] files = System.IO.Directory.GetFiles(appEXpath);
-                    int count = 0;
+                    string[] fileNum = System.IO.Directory.GetFileSystemEntries(appEXpath);
 
                     //關閉要更新的檔案
                     foreach (string file in files)
@@ -296,18 +296,23 @@ namespace WebRequest
 
                     Thread.Sleep(500);
 
-                    // Copy the files and overwrite destination files if they already exist.
-                    foreach (string s in files)
+                    /*foreach (string file in files)
                     {
-                        // Use static Path methods to extract only the file name from the path.
-                        string fileName = Path.GetFileName(s);
+                        string fileName = Path.GetFileName(file);
                         string destFile = Path.Combine("", fileName);
-                        File.Copy(s, destFile, true);
+                        File.Copy(file, destFile, true);         
 
                         count++;
                         value = 100 * (count / files.Length);
                         copyWorker.ReportProgress(value);
-                    }
+                    }*/
+
+
+                    Tools tools = new Tools();
+                    tools.Copy(appEXpath,appPath);
+
+                    value = 100 * (tools.completeFiles / fileNum.Length);
+                    copyWorker.ReportProgress(value);
                 }
             }
             catch (Exception ex)

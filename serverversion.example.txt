@@ -1,0 +1,7 @@
+1.1.3
+updater
+．可多行顯示
+．可多行顯示
+．可多行顯示
+※符號不影響顯示更新內容
+https://github.com/wonk2563/Update/releases/download/Release/exampleUpdateData.zip
